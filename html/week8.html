@@ -44,71 +44,55 @@
     </nav>
 
     <div class="intro-header">
-        <h1>Week 7 </h1>
+        <h1>Week 8 </h1>
         <h1>HTML Development Blog</h1>
     </div>
+    <br>
+    <h1 class="title"> Random User Generator</h1>
+    <div class="user-profile">
+        <img id="avatar" src="https://pbs.twimg.com/profile_images/743138182607175680/ZJzktgBk_400x400.jpg" />
+        <div id="fullname">Jon Snow</div>
+        <div id="username">kingofnorth</div>
+        <div class="description">
+          <div>Email: <span id="email">jon@hotmail.com</span></div>
+          <div>City: <span id="city">Winterfell</span></div>
+        </div>
+        <div class="footer">
+          <button id="btn">Next User!</button>
+        </div>
+      </div>
+  
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <div class="stopwatch">
-      <h1>Simple JS Stopwatch</h1>
-      <p><span id="seconds">00</span>:<span id="tens">00</span></p>
-      <button id="button-start">Start</button>
-      <button id="button-stop">Stop</button>
-      <button id="button-reset">Reset</button>
-      </div> 
-
-
-    <script>
-      window.onload = function () {
-        var seconds = 0; 
-        var tens = 0; 
-        var appendTens = document.getElementById("tens")
-        var appendSeconds = document.getElementById("seconds")
-        var buttonStart = document.getElementById('button-start');
-        var buttonStop = document.getElementById('button-stop');
-        var buttonReset = document.getElementById('button-reset');
-        var Interval;
-        
-        buttonStart.onclick = function() {
-          clearInterval(Interval);
-          Interval = setInterval(startTimer, 10);
+      <script>
+        let url = 'https://randomuser.me/api/';
+        document.getElementById('btn').addEventListener("click", myFunction);
+        function myFunction() {
+            location.reload();
         }
-        buttonStop.onclick = function() {
-          clearInterval(Interval);
-        }
-        buttonReset.onclick = function() {
-          clearInterval(Interval);
-          tens = "00";
-          seconds = "00";
-          appendTens.innerHTML = tens;
-          appendSeconds.innerHTML = seconds;
-        }
-        
-        function startTimer () {
-          tens++; 
-          if(tens <= 9){
-            appendTens.innerHTML = "0" + tens;
-          }
-          if (tens > 9){
-            appendTens.innerHTML = tens;
-          } 
-          if (tens > 99) {
-            console.log("seconds");
-            seconds++;
-            appendSeconds.innerHTML = "0" + seconds;
-            tens = 0;
-            appendTens.innerHTML = "0" + 0;
-          }
-          if (seconds > 9){
-            appendSeconds.innerHTML = seconds;
-          }
-        }
-      }
-    </script>
-
+        fetch(url)
+        .then(response => response.json()) 
+        .then(function(data){
+            let person = data.results[0]
+            console.log(person)
+            let name = person.name.title + ' ' +    
+            person.name.first + ' ' + 
+            person.name.last
+            console.log(name);
+            $('#fullname').text(name);
+            $('#username').text(person.login.username);
+            $('#email').text(person.email);
+            $('#location').text(person.location.city);
+            $('#avatar').attr("src", person.picture.medium);
+        });
+      </script>
+      <br>
+      <br>
+      <br>
     <div class="thoughts-box">
         <h1>Personal Thoughts:</h1>
-        <p>Back with more Javascript this week.</p>
-        <p>Again, still completely lost.</p>
-        <p>Must be due to my inability to read actual code.</p>
-        <p>Procrastination is awful.</p>
-      </div>
+        <p>Learnt randomuser api this week.</p>
+        <p>Not entirely sure what situation I would use this on.</p>
+        <p>Cool to learn it I suppose</p>
+        <p>Probably have to refer back since I don't exactly understand how the code works.</p>
+    </div>
