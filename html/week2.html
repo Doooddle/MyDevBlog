@@ -3,31 +3,107 @@
 <head>
     <meta charset="UTC-8">
     <meta name="viewport" content="width=device-width, intitial-scale=1.0">
-    <link rel= "stylesheet" href = "style.css">
-    <title>Week 2 </title>
+    <link rel= "stylesheet" href = "../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600&family=Montserrat:wght@300;400;500&family=Nunito:wght@400;500&display=swap" rel="stylesheet">
+    <title> My Development Blog for FED </title>
 </head>    
 </html>
+  
     <nav>
-        <p1> Navigation</p1>
-        <ul>
-            <li> <a href ="index.html" target="_blank">Homepage</a> </li>
-            <li> <a href ="week1.html" target="_blank">Week1</a> </li>
-            <li> <a href ="week2.html" target="_blank">Week2</a> </li>
-            <li> <a href ="week3.html" target="_blank">Week3</a> </li>
-            <li> <a href ="week4.html" target="_blank">Week4</a> </li>
-        </ul>
+        <div class="navbar">
+            <a href="../index.html">Home</a>
+            <div class="subnav">
+              <button class="subnavbtn">Start <i class="fa fa-caret-down"></i></button>
+              <div class="subnav-content">
+                <a href = "week1.html" target="">Week1</a>
+                <a href = "week2.html" target="">Week2</a>
+                <a href = "week3.html" target="">Week3</a>
+                <a href = "week4.html" target="">Week4</a>
+              </div>
+            </div>
+            <div class="subnav">
+              <button class="subnavbtn">Middle<i class="fa fa-caret-down"></i></button>
+              <div class="subnav-content">
+                <a href = "week5.html" target="">Week5</a>
+                <a href = "week6.html" target="">Week6</a>
+                <a href = "week7.html" target="">Week7</a>
+                <a href = "week8.html" target="">Week8</a>
+              </div>
+            </div>
+            <div class="subnav">
+              <button class="subnavbtn">End <i class="fa fa-caret-down"></i></button>
+              <div class="subnav-content">
+                <a href = "week9.html" target="">Week9</a>
+                <a href = "week12.html" target="">Week12</a>
+                <a href = "week13.html" target="">Week13</a>
+                <a href = "week14.html" target="">Week14</a>
+              </div>
+          </div>
+        </div>
     </nav>
 
-    <footer>
-        <h1> Week 2 Dev Blog</h1>
-    </footer>
 
-    <h5> Personal Thoughts:</h5>
+    <div class="intro-header">
+        <h1>Week 2 </h1>
+        <h1>HTML Development Blog</h1>
+    </div>
+
+    <style>
+        #heading {
+          font-family: Arial;
+          background-color: yellowgreen;
+          color: white;
+        }
     
-    <section>
-        <ul>
-            <li> Made this simple development blog for the assignment with what I've learnt.</li>
-            <li> Looks fine, but nothing special.</li>
-            <li> Probably wants further refining once I learn more.</li>
-        </ul>
-    </section>
+        .sports-history {
+          color: red;
+        }
+    
+        .computing-history {
+          color: blue;
+        }
+      </style>
+    </head>
+    
+      <div id=heading>
+        <h1>Sporting History</h1>
+        <p>
+          Giants & Heroes
+        </p>
+      </div>
+    
+      <h3 class="sports-history"> Track & Field</h3>
+      <p>
+        Some sporting feats ridicule expectations, fewer violate logic but the rarest of all added a defying of gravity to a
+        hat-trick of achievements. At 3.45pm on 18 October 1968 in Mexico City’s Estadio Olímpico Universitario Bob Beamon
+        accomplished all three.
+      </p>
+    
+      <h3 class=sports-history> Rugby</h3>
+      <p>
+        With the game locked at 10 – 10 with thirty minutes on the clock, a Munster scrum just outside the Biarritz line
+        enabled Peter Stringer to do the unexpected and break on the blindside for an unforgettable try. A moment of sheer
+        brilliance by the Munster and Ireland scrumhalf. The try proved to be crucial as Munster won by 23 – 19 to lift the
+        European Cup in Cardiff.
+      </p>
+      <h3 class=computing-history>The First Programmer</h3>
+      <p>Ada Lovelace, whose real name was Ada King, Countess of Lovelace, and daughter to the poet Lord Byron, is widely
+        considered to be the world’s first computer programmer, at least in the theoretical sense. As a young woman,
+        Lovelace befriended the mathematician Charles Babbage who wrote plans for the Analytical Engine, a clockwork
+        counting machine
+      </p>
+      <h3 class=computing-history>The First Compiler</h3>
+      <p>
+        Grace Brewster Murray Hopper (née Murray December 9, 1906 – January 1, 1992) was an American computer scientist and
+        United States Navy rear admiral. One of the first programmers of the Harvard Mark I computer, she was a pioneer of
+        computer programming who invented one of the first linkers.
+      </p>
+
+    <div class="thoughts-box">
+        <h1>Personal Thoughts:</h1>
+        <p>Made this simple development blog with what I've learnt</p>
+        <p>Looks okay and serviceable.</p>
+        <p>Not sure what else I have to add here.</p>
+    </div>
+
