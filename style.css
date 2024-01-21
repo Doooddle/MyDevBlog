@@ -114,5 +114,13 @@ html{
   font-size: 15px;
 }
 
+.wk3-row {
+  display: flex;
+}
+
+.wk3-column img {
+  width: 100%;
+  height: 300px;
+}
 
 
