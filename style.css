@@ -95,3 +95,24 @@ html{
   
 }
 
+.first-webpage {
+  background-color: lightblue;
+}
+
+.first-webpage h2{
+  text-align: center;
+  font-size: 30px;
+}
+
+.first-webpage p, li{
+  padding-left: 10%;
+  font-size: 20px;
+}
+
+.first-webpage {
+  padding-left: 10%;
+  font-size: 15px;
+}
+
+
+
