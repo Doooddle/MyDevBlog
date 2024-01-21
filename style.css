@@ -1,6 +1,8 @@
 /*------formatting-------*/
 html{
   width: 100%;
+  overflow-x: hidden;
+
 }
 *{
   margin: 0;
@@ -69,10 +71,27 @@ html{
   display: block;
 }
 
+.index-image img {
+  max-width: 100%;
+  height: auto;
+}
+
 .intro-header {
+  margin-top:-6px;
   padding: 10px;
   text-align: center;
-  background: coral;
+  background: lightsalmon;
   color: white;
-  font-size: 10px;
+  font-size: 20px;
 }
+
+
+.thoughts-box {
+  padding: 20px;
+  text-align: center;
+  background: palevioletred;
+  color: white;
+  font-size: 20px;
+  
+}
+
