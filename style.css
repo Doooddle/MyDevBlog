@@ -168,3 +168,10 @@ html{
   color: white;
   font-size: 25px;
 }
+
+.stopwatch {
+  width: 800px;
+  margin: 30px auto;
+  color: black;
+  text-align:center;
+}

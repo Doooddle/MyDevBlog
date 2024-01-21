@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset="UTC-8">
+    <meta name="viewport" content="width=device-width, intitial-scale=1.0">
+    <link rel= "stylesheet" href = "../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600&family=Montserrat:wght@300;400;500&family=Nunito:wght@400;500&display=swap" rel="stylesheet">
+    <title> My Development Blog for FED </title>
+</head>    
+</html>
+  
+    <nav>
+        <div class="navbar">
+            <a href="../index.html">Home</a>
+            <div class="subnav">
+              <button class="subnavbtn">Start <i class="fa fa-caret-down"></i></button>
+              <div class="subnav-content">
+                <a href = "week1.html" target="">Week1</a>
+                <a href = "week2.html" target="">Week2</a>
+                <a href = "week3.html" target="">Week3</a>
+                <a href = "week4.html" target="">Week4</a>
+              </div>
+            </div>
+            <div class="subnav">
+              <button class="subnavbtn">Middle<i class="fa fa-caret-down"></i></button>
+              <div class="subnav-content">
+                <a href = "week5.html" target="">Week5</a>
+                <a href = "week6.html" target="">Week6</a>
+                <a href = "week7.html" target="">Week7</a>
+                <a href = "week8.html" target="">Week8</a>
+              </div>
+            </div>
+            <div class="subnav">
+              <button class="subnavbtn">End <i class="fa fa-caret-down"></i></button>
+              <div class="subnav-content">
+                <a href = "week9.html" target="">Week9</a>
+                <a href = "week12.html" target="">Week12</a>
+                <a href = "week13.html" target="">Week13</a>
+                <a href = "week14.html" target="">Week14</a>
+              </div>
+          </div>
+        </div>
+    </nav>
+
+    <div class="intro-header">
+        <h1>Week 7 </h1>
+        <h1>HTML Development Blog</h1>
+    </div>
+
+    <div class="stopwatch">
+      <h1>Simple JS Stopwatch</h1>
+      <p><span id="seconds">00</span>:<span id="tens">00</span></p>
+      <button id="button-start">Start</button>
+      <button id="button-stop">Stop</button>
+      <button id="button-reset">Reset</button>
+      </div> 
+
+
+    <script>
+      window.onload = function () {
+        var seconds = 00; 
+        var tens = 00; 
+        var appendTens = document.getElementById("tens")
+        var appendSeconds = document.getElementById("seconds")
+        var buttonStart = document.getElementById('button-start');
+        var buttonStop = document.getElementById('button-stop');
+        var buttonReset = document.getElementById('button-reset');
+        var Interval;
+        
+        buttonStart.onclick = function() {
+          clearInterval(Interval);
+          Interval = setInterval(startTimer, 10);
+        }
+        buttonStop.onclick = function() {
+          clearInterval(Interval);
+        }
+        buttonReset.onclick = function() {
+          clearInterval(Interval);
+          tens = "00";
+          seconds = "00";
+          appendTens.innerHTML = tens;
+          appendSeconds.innerHTML = seconds;
+        }
+  
+   
+  
+  function startTimer () {
+    tens++; 
+    
+    if(tens <= 9){
+      appendTens.innerHTML = "0" + tens;
+    }
+    
+    if (tens > 9){
+      appendTens.innerHTML = tens;
+      
+    } 
+    
+    if (tens > 99) {
+      console.log("seconds");
+      seconds++;
+      appendSeconds.innerHTML = "0" + seconds;
+      tens = 0;
+      appendTens.innerHTML = "0" + 0;
+    }
+    
+    if (seconds > 9){
+      appendSeconds.innerHTML = seconds;
+    }
+  
+  }
+  
+
+}
+    </script>
+
+ 
+  
+
+    <div class="thoughts-box">
+        <h1>Personal Thoughts:</h1>
+        <p>Back with more Javascript this week.</p>
+        <p>Again, still completely lost.</p>
+        <p>Must be due to my inability to read actual code.</p>
+        <p>Procrastination is awful.</p>
+      </div>
