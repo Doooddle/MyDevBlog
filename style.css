@@ -153,3 +153,7 @@ html{
     flex: 0 45%;
   }
 }
+
+.wk-5-OAL img{
+  max-width: 100%;
+}
