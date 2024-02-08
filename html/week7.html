@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang = "en">
 <head>
-    <meta charset="UTC-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, intitial-scale=1.0">
     <link rel= "stylesheet" href = "../style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -56,59 +56,57 @@
       <button id="button-reset">Reset</button>
       </div> 
 
+      <script>
+     window.onload = function () {
+            var seconds = 0;
+            var tens = 0;
+            var appendTens = document.getElementById("tens");
+            var appendSeconds = document.getElementById("seconds");
+            var buttonStart = document.getElementById('button-start');
+            var buttonStop = document.getElementById('button-stop');
+            var buttonReset = document.getElementById('button-reset');
+            var interval;
 
-    <script>
-      window.onload = function () {
-        var seconds = 0; 
-        var tens = 0; 
-        var appendTens = document.getElementById("tens")
-        var appendSeconds = document.getElementById("seconds")
-        var buttonStart = document.getElementById('button-start');
-        var buttonStop = document.getElementById('button-stop');
-        var buttonReset = document.getElementById('button-reset');
-        var Interval;
-        
-        buttonStart.onclick = function() {
-          clearInterval(Interval);
-          Interval = setInterval(startTimer, 10);
-        }
-        buttonStop.onclick = function() {
-          clearInterval(Interval);
-        }
-        buttonReset.onclick = function() {
-          clearInterval(Interval);
-          tens = "00";
-          seconds = "00";
-          appendTens.innerHTML = tens;
-          appendSeconds.innerHTML = seconds;
-        }
-        
-        function startTimer () {
-          tens++; 
-          if(tens <= 9){
-            appendTens.innerHTML = "0" + tens;
-          }
-          if (tens > 9){
-            appendTens.innerHTML = tens;
-          } 
-          if (tens > 99) {
-            console.log("seconds");
-            seconds++;
-            appendSeconds.innerHTML = "0" + seconds;
-            tens = 0;
-            appendTens.innerHTML = "0" + 0;
-          }
-          if (seconds > 9){
-            appendSeconds.innerHTML = seconds;
-          }
-        }
-      }
-    </script>
+            buttonStart.onclick = function () {
+                clearInterval(interval);
+                interval = setInterval(startTimer, 10);
+            };
+
+            buttonStop.onclick = function () {
+                clearInterval(interval);
+            };
+
+            buttonReset.onclick = function () {
+                clearInterval(interval);
+                tens = 0;
+                seconds = 0;
+                appendTens.textContent = "00";
+                appendSeconds.textContent = "00";
+            };
+
+            function startTimer() {
+                tens++;
+                if (tens < 10) {
+                    appendTens.textContent = "0" + tens;
+                } else if (tens >= 10 && tens <= 99) {
+                    appendTens.textContent = tens;
+                } else {
+                    tens = 0;
+                    appendTens.textContent = "00";
+                    seconds++;
+                    if (seconds < 10) {
+                        appendSeconds.textContent = "0" + seconds;
+                    } else {
+                        appendSeconds.textContent = seconds;
+                    }
+                }
+            }
+        };
+      </script>
 
     <div class="thoughts-box">
         <h1>Personal Thoughts:</h1>
         <p>Back with more Javascript this week.</p>
-        <p>Again, still completely lost.</p>
-        <p>Must be due to my inability to read actual code.</p>
-        <p>Procrastination is awful.</p>
+        <p>Quite lost with whatever that is going on.</p>
+        <p>Similar to programming lessons at the moment.</p>
       </div>
